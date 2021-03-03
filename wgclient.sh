@@ -67,6 +67,7 @@ for net in $range
 do printf "%s\n" "[Interface]" \
 "PrivateKey = $(cat $workdir/private-$net)" \
 "Address = $classea.$classeb.$classec.$net/24" \
+"MTU = 1420" \
 " " \
 "[Peer]" \
 "Endpoint = $extip:$port" \
@@ -82,4 +83,3 @@ done
 
 rm -rf $workdir/private-* $workdir/public-*
 #exit 1
-
