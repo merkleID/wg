@@ -1,6 +1,7 @@
 [Unit]
 #This file goes in /etc/systemd/system/
-Description = /etc/rc.local for multiple wireguard interfaces
+Description = /etc/rc.local to be run at boot by systemd
+
 After=network-online.target nss-lookup.target
 Wants=network-online.target nss-lookup.target
 WantedBy=multi-user.target
