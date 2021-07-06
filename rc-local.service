@@ -1,0 +1,18 @@
+[Unit]
+Description = /etc/rc.local for wireguard intefaces
+After=network-online.target nss-lookup.target
+Wants=network-online.target nss-lookup.target
+WantedBy=multi-user.target
+
+[Service]
+ExecStartPre=/bin/sleep 1
+Type=oneshot
+#Type=forking
+ExecStart=/etc/rc.local
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+Environment=WG_ENDPOINT_RESOLUTION_RETRIES=infinity
+
+[Install]
+WantedBy=multi-user.target
