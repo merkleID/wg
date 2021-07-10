@@ -1,9 +1,7 @@
 #!/bin/bash
 #script to raise multiple wireguard interfaces at boot
 
-echo module wireguard +p > /sys/kernel/debug/dynamic_debug/control
-
-declare -A list
+#declare -A list
 
 list=$(ls -1 /etc/wireguard/*.conf)
 
@@ -12,3 +10,5 @@ for nic in ${list[@]}
 	wg-quick up $nic
 	sleep 0.5
 done
+
+echo module wireguard +p > /sys/kernel/debug/dynamic_debug/control
