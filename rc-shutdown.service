@@ -1,0 +1,12 @@
+[Unit]
+Description=Turn all WG interfaces off before shutdown
+DefaultDependencies=no
+After=final.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/rc.shutdown
+
+
+[Install]
+WantedBy=final.target
