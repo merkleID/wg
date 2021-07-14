@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#script to turn multiple wireguard interfaces off at system shutdown
+
+list=$(ls -1 /etc/wireguard/*.conf)
+
+for nic in ${list[@]}
+	do
+	wg-quick down $nic
+	sleep 0.5
+done
