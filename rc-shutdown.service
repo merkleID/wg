@@ -7,6 +7,5 @@ After=final.target
 Type=oneshot
 ExecStart=/etc/rc.shutdown
 
-
 [Install]
 WantedBy=final.target
