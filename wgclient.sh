@@ -82,4 +82,5 @@ do wg set $int peer $(cat $workdir/public-$pub) allowed-ips $classea.$classeb.$c
 done
 
 rm -rf $workdir/private-* $workdir/public-*
+wg-quick save $int
 #exit 1
