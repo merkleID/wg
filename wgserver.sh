@@ -1,2 +1,1 @@
-privkey=$(wg genkey | tee private | wg pubkey)
-echo $privkey
+pk=$(wg genkey | tee private | wg pubkey)

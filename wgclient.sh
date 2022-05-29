@@ -1,5 +1,5 @@
 #!/bin/bash
-#version 1.18
+#version 1.19
 clear
 if=$(wg show interfaces)
 extip=$(curl -sS ifconfig.io)
