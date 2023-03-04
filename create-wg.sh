@@ -7,7 +7,7 @@ echo "inserire subnet (esempio: 172.25.1.0)"
 read SUB
 echo "***"
 echo ""
-echo "inserire CIDR (8,16,18,23,24,28,32)"
+echo "inserire CIDR (1..32)"
 read MASK
 echo "***"
 echo ""
